@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(206, 202, 202);
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .center-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background-color: deepskyblue;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+
+        .panel {
+            position: absolute;
+            width: 100px;
+            height: 120px;
+            background: rgb(115, 4, 218);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 8px;
+            color: white;
+        }
+
+
+        .panel1 {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .panel2 {
+            top: 25%;
+            right: 80px;
+            transform: translateY(-50%);
+        }
+
+        .panel3 {
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        .panel4 {
+            bottom: 25%;
+            right: 80px;
+            transform: translateY(50%);
+        }
+
+        .panel5 {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .panel6 {
+            bottom: 25%;
+            left: 80px;
+            transform: translateY(50%);
+        }
+
+        .panel7 {
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+
+        .panel8 {
+            top: 25%;
+            left: 80px;
+            transform: translateY(-50%);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="center-circle">CENTER CIRCLE</div>
+        <div class="panel panel1">PANEL 1</div>
+        <div class="panel panel2">PANEL 2</div>
+        <div class="panel panel3">PANEL 3</div>
+        <div class="panel panel4">PANEL 4</div>
+        <div class="panel panel5">PANEL 5</div>
+        <div class="panel panel6">PANEL 6</div>
+        <div class="panel panel7">PANEL 7</div>
+        <div class="panel panel8">PANEL 8</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Grid</title>
+
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #c3c3d8;
+    }
+
+    .calculator {
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      grid-template-rows: 100px repeat(5, 80px);
+      gap: 5px;
+      background: #000;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .display {
+      grid-column: 1 / -1;
+      background: #111;
+      color: #fff;
+      font-size: 2rem;
+      text-align: right;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    button {
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #555;
+      color: white;
+    }
+
+    button:active {
+      opacity: 0.8;
+    }
+
+    .span-two {
+      grid-column: span 2;
+    }
+
+    .span-two-row {
+      grid-row: span 2;
+    }
+
+    .red {
+      background: #b33;
+    }
+
+    .blue {
+      background: #114a68;
+    }
+
+  </style>
+
+
+
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">0</div>
+
+    <button class="red span-two">AC</button>
+    <button>/</button>
+    <button>x</button>
+
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>-</button>
+
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>+</button>
+
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button class="blue span-two-row">=</button>
+
+    <button class="span-two">0</button>
+    <button>.</button>
+  </div>
+</body>
+</html>
