@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saachiart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            width: 100%;
+            background-color: black;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            justify-content: center;
+            gap: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .header-title {
+            font-size: 16px;
+        }
+
+        .link {
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Navbar  */
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            margin-top: 50px;
+            padding: 10px 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo-name h2 {
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            padding: 8px 10px 8px 35px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 10px;
+            color: #888;
+            font-size: 14px;
+            pointer-events: none;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+
+
+        /* Navbar-2  */
+
+        .nav-2 {
+            background-color: rgb(255, 255, 255);
+            padding: 10px 20px;
+        }
+
+
+        .nav-items {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-items a:hover {
+            color: #0073e6;
+        }
+
+
+
+        /* Home Page  */
+
+        .home {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .home .image {
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .home .image img {
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .home .about {
+            width: 500px;
+            height: 150px;
+            position: absolute;
+            top: 70%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            color: black;
+            background: white;
+            padding: 20px 40px;
+            border-radius: 5px;
+        }
+
+        .home .about h2{
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+        .home .about p{
+            margin-top: 10px;
+        }
+
+
+
+        /* buttons Links  */
+
+        .buttons{
+            margin-top: 35px;
+            margin-bottom: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .buttons-items{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-left: 250px;       
+        }
+
+        .buttons-items button{
+            border: 2px solid black;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <h2 class="header-title">Make Your Everyday More Beatiful</h2>
+        <a href="#" class="link">GET 10% OFF ORIGINAL ART</a>
+    </header>
+
+
+
+    <nav class="navbar">
+
+        <div class="logo-name">
+            <h2>Saatchi art</h2>
+        </div>
+
+        <div class="nav-item">
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="icons">
+                <i class="fa-solid fa-circle-user"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+
+
+    <nav class="nav-2">
+        <div class="nav-items">
+            <a href="">Paintings</a>
+            <a href="">Photography</a>
+            <a href="">Sculpture</a>
+            <a href="">Drawings</a>
+            <a href="">Prints</a>
+            <a href=""> Inspiration</a>
+            <a href="">Art Advisory</a>
+            <a href="">Trade</a>
+            <a href="">Curated Deals</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Home Page  -->
+
+    <div class="home">
+        <div class="image">
+            <img src="https://d3t95n9c6zzriw.cloudfront.net/homepage/hybrid-2021/hp-hero-slide3-07142025-new-large.jpg"
+                alt="">
+            <div class="about">
+                <h2>New to Buying Art?</h2>
+                <p>Your Personal Art Advisor Awaits</p>
+                <a href="">Get Expert Help</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- buttons  -->
+
+    <div class="buttons">
+        <div class="buttons-items">
+            <button>Paintings</button>
+            <button>Paintings</button>
+            <button>Paintings</button>
+            <button>Paintings</button>
+            <button>Paintings</button>
+            <button>Paintings</button>
+            <button>Paintings</button>
+            <button>Paintings</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
