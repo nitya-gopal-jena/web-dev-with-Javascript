@@ -1,3 +1,6 @@
+// Write a program to find the number of digits in a given number ?
+
+
 let num = 143;
 let count = 0;
 
