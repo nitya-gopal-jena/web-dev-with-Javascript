@@ -1,7 +1,7 @@
 
 // Write a program to print alternate palindrome number
 
-// Explanation: print palindrome no one after another . (11, 33, 55) like this 
+// Explanation: print palindrome no one after another . (11, 33, 55) like this
 
 let count = 0;
 for (let i = 10; i <= 100; i++) {
