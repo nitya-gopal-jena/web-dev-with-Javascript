@@ -1,3 +1,14 @@
+
+/* print the below pattern
+
+    @ * * * * 
+    * @ * * * 
+    * * @ * * 
+    * * * @ * 
+    * * * * @ 
+
+*/
+
 let n = 5;
 let res = "";
 
@@ -9,7 +20,7 @@ for (let i = 1; i <= n; i++) {
             res += "* ";
         }
     }
-    res += '\n'; 
+    res += '\n';
 }
 
 console.log(res);
