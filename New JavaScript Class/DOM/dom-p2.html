@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Count</title>
 </head>
-<body>
-    
-    <div>
 
-        <h1>Count Value is:
-            
-        <span id="count"></span>
+<body>
+    <div>
+        <h1>
+            Count Value is:
+
+            <span id="count"></span>
         </h1>
 
         <button onclick="incCount()">Click Here</button>
-
-
     </div>
 
-
-
     <script>
-    let count = 0;
-    let countVal = document.getElementById('count');
-    countVal.innerText = count;
+        let count = 0;
+        let countVal = document.getElementById('count');
+        countVal.innerText = count;
 
-    function incCount(){
-         count++;
-         update()
-    }
+        function incCount() {
+            count++;
+            update();
+        }
 
-    function update(){
-        countVal.innerHTML= count;
-    }
-
-
-
+        function update() {
+            countVal.innerHTML = count;
+        }
     </script>
-
 </body>
+
 </html>
