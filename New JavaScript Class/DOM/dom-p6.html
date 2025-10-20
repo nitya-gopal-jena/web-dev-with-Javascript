@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Burger Item Card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #items-list {
+      border: 1px solid #787819;
+      width: 280px;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #items-list > img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .items {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .items h2 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    .items h3 {
+      font-size: 1rem;
+      margin: 4px 0;
+      color: #333;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0 15px;
+      gap: 10px;
+    }
+
+    button {
+      padding: 6px;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      border: none;
+      background-color: #eee;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: yellowgreen;
+      cursor: pointer;
+    }
+
+    #count {
+      font-size: 1.2rem;
+      min-width: 20px;
+      display: inline-block;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div id="items-list"></div>
+  </nav>
+
+  <script src="./JS/cart.js">
+   
+  </script>
+</body>
+</html>
