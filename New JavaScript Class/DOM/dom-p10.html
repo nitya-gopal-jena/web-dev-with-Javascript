@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+            margin: 100px auto;
+
+        }
+
+        #box {
+            background-color: aqua;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+        }
+
+        .btn-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            cursor: pointer;
+            border: 1px solid black;
+            outline: none;
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="container">
+
+        <div id="box">
+
+    </div>
+
+    <div class="btn-items">
+        <button onclick="red()">Red</button>
+        <button onclick="green()">green</button>
+        <button onclick="yellow()">Yellow</button>
+        <button onclick="orange()">Orange</button>
+    </div>
+</div>
+
+
+
+    <script>
+
+        let box = document.getElementById('box');
+
+        function red() {
+            box.style.backgroundColor = 'red'
+        }
+
+        function green() {
+            box.style.backgroundColor = 'green'
+        }
+
+        function yellow() {
+            box.style.backgroundColor = 'yellow'
+        }
+
+        function orange() {
+            box.style.backgroundColor = 'orange'
+        }
+
+
+    </script>
+</body>
+
+</html>
