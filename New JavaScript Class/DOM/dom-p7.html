@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="text">Hello Everyone</h1>
+
+    <button onclick="gm()">10 AM</button>
+    <button onclick="ga()">2 PM</button>
+    <button onclick="gn()">11 PM</button>
+
+    <script>
+      let textTag = document.getElementById('text');
+
+      function gm() {
+        textTag.textContent = 'Good Morning';
+      }
+
+      function ga() {
+        textTag.textContent = 'Good Afternoon';
+      }
+
+      function gn() {
+        textTag.textContent = 'Good Night';
+      }
+    </script>
+  </body>
+</html>
