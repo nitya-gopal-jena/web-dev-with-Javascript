@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Like and Dislike</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 22rem;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .card-text {
+            font-style: italic;
+            color: #6c757d;
+        }
+
+        .btn-custom {
+            width: 48%;
+            font-weight: 500;
+        }
+
+        #like,
+        #dislike,
+        #total-count {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/2681319/pexels-photo-2681319.jpeg" class="card-img-top"
+            alt="Quote Image" />
+        <div class="card-body text-center">
+            <h5 class="card-title">Quote</h5>
+            <p class="card-text">Think always different</p>
+
+            <p id="like">Likes: 0</p>
+            <p id="dislike">Dislikes: 0</p>
+
+            <div class="btn-group">
+                <button class="btn btn-success btn-custom" id="btn-like" onclick="likesInc()">👍 Like</button>
+                <button class="btn btn-danger btn-custom" id="btn-dislike" onclick="dislikeInc()">👎 Dislike</button>
+            </div>
+
+            <p id="total-count" class="mt-3">Total Count: 0</p>
+        </div>
+    </div>
+
+    <script>
+        let likes = document.getElementById('like');
+        let dislikes = document.getElementById('dislike');
+        let totalCount = document.getElementById('total-count');
+        let likeCount = 0;
+        let dislikeCount = 0;
+
+        function likesInc() {
+            likeCount++;
+            likes.innerText = `Likes: ${likeCount}`;
+            totalCount.innerText = `Total Count: ${likeCount + dislikeCount}`;
+            localStorage.setItem('likes', likeCount);
+        }
+
+        function dislikeInc() {
+            dislikeCount++;
+            dislikes.innerText = `Dislikes: ${dislikeCount}`;
+            totalCount.innerText = `Total Count: ${likeCount + dislikeCount}`;
+            localStorage.setItem('dislike', dislikeCount)
+        }
+
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
