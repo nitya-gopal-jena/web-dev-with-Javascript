@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 300px;
+            height: 200px;
+            justify-content: center;
+            align-items: center;
+            margin: 100px auto;
+            border: 2px solid rgb(7, 96, 93);
+            background-color: aquamarine;
+        }
+
+        span {
+            text-align: center;
+        }
+
+        .btn {
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            margin-left: 40px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #count {
+            margin-left: 140px;
+            font-size: 25px;
+        }
+
+        #btn-inc{
+            background-color: rgb(255, 206, 10);
+
+        }
+        #btn-dic{
+            background-color: chartreuse;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <span id="count">0</span>
+
+        <div class="btn">
+            <button onclick="inc()" id="btn-inc">INC</button>
+            <button onclick="dec()" id="btn-dic">DEC</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        const countTag = document.getElementById('count');
+        let count = 0;
+
+        function inc() {
+            ++count;
+            countTag.innerText = count;
+        }
+
+        function dec() {
+            --count;
+            countTag.innerText = count;
+            if (count <= 0) {
+                countTag.innerText = 0;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
