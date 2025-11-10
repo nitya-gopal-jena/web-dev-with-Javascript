@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <form>
+
+        <input type="email" name="" id="email" placeholder="Enter Email">
+        <input type="number" name="" id="pass" placeholder="Enter Password">
+        <button id="btn-sub">Submit</button>
+
+    </form>
+
+
+
+
+
+    <script>
+
+        let email = document.getElementById('email');
+        let password = document.getElementById('pass')
+        let submitBtn = document.getElementById('btn-sub');
+
+        submitBtn.addEventListener('click', (e) => {
+            let em = email.value;
+            let pas = password.value;
+
+            e.preventDefault();
+
+            console.log(`Email:${em} password:${pas}`);
+
+            localStorage.setItem('email', em)
+            localStorage.setItem('pass', pas)
+
+        });
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

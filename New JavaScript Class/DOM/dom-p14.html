@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="h1">0</h1>
+
+      <input type="number" placeholder="Enter a number" id="input" />
+
+      <button id="btn-inc">INC</button>
+      <button id="btn-dic">DEC</button>
+    </div>
+
+    <script>
+      let h1Tag = document.getElementById('h1');
+      let incBtn = document.getElementById('btn-inc');
+      let dicBtn = document.getElementById('btn-dic');
+      let inputTag = document.getElementById('input');
+      let count = input.value;
+
+      incBtn.onclick = () => {
+        h1Tag.innerHTML = ++count;
+      };
+
+      dicBtn.onclick = () => {
+        h1Tag.innerHTML = --count;
+      };
+    </script>
+  </body>
+</html>
