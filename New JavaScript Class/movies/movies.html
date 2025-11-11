@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie List</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        #movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 0 0 18rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            height: 270px;
+            object-fit: cover;
+        }
+
+        #search {
+            width: 500px;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+
+        .title {
+            margin-left: 80px;
+            margin-bottom: 20px;
+        }
+
+
+        .not-found {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            width: 100%;
+            text-align: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="search" id="search" placeholder="Search movies here" class="form-control mb-3 " />
+    <h1 class="title">🎬 Movie List</h1>
+    <div id="movie-container" class="container"></div>
+
+    <script>
+        const movies = [
+            {
+                id: 1,
+                name: "The Shawshank Redemption",
+                description: "Two imprisoned men bond over years, finding solace and eventual redemption through acts of decency.",
+                poster: "https://www.themoviedb.org/t/p/original/gUgdoneM2fzsT6Qx7GhGU4kxUgx.jpg"
+            },
+            {
+                id: 2,
+                name: "The Godfather",
+                description: "The aging patriarch of an organized crime dynasty transfers control to his reluctant son.",
+                poster: "https://tse3.mm.bing.net/th/id/OIP._5fxLczZe-Orf76zbPUWSAHaLH?rs=1&pid=ImgDetMain&o=7&rm=3"
+            },
+            {
+                id: 3,
+                name: "The Dark Knight",
+                description: "Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos.",
+                poster: "https://www.themoviedb.org/t/p/original/eP5NL7ZlGoW9tE9qnCdHpOLH1Ke.jpg"
+            },
+            {
+                id: 4,
+                name: "Pulp Fiction",
+                description: "The lives of two hitmen, a boxer, and others intertwine in tales of violence and redemption.",
+                poster: "https://wallpapercave.com/wp/wp7665395.jpg"
+            },
+            {
+                id: 5,
+                name: "Forrest Gump",
+                description: "A man with a low IQ witnesses and influences historical events in the 20th century.",
+                poster: "https://i.pinimg.com/736x/52/29/99/5229997934b5b5acfa512b32db0091fd.jpg"
+
+            },
+            {
+                id: 6,
+                name: "Inception",
+                description: "A thief who steals corporate secrets through dream-sharing technology is given a chance at redemption.",
+                poster: "https://c8.alamy.com/comp/DBW2R3/inception-2010-leonardo-dicaprio-christopher-nolan-dir-016-moviestore-DBW2R3.jpg"
+            },
+            {
+                id: 7,
+                name: "Fight Club",
+                description: "An insomniac office worker and a soap maker form an underground fight club.",
+                poster: "https://tse2.mm.bing.net/th/id/OIP.X8GXwUnJEzAclGg3OtAnrAHaLH?rs=1&pid=ImgDetMain&o=7&rm=3"
+            },
+            {
+                id: 8,
+                name: "Interstellar",
+                description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity’s survival.",
+                poster: "https://mir-s3-cdn-cf.behance.net/project_modules/hd/297acd129204217.616629e21fe76.png"
+            }
+        ];
+
+
+
+        const search = document.getElementById("search");
+        const displayTag = document.getElementById("movie-container");
+
+        function renderMovies(movieList) {
+            displayTag.innerHTML = "";
+
+
+            movieList.forEach((movie) => {
+                const card = document.createElement("div");
+                card.classList.add("card");
+
+                card.innerHTML = `
+            <img src="${movie.poster}" class="card-img-top" alt="${movie.name}">
+            <div class="card-body">
+              <h5 class="card-title">${movie.name}</h5>
+              <p class="card-text">${movie.description}</p>
+            </div>
+          `;
+                displayTag.appendChild(card);
+            });
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            renderMovies(movies);
+        });
+
+
+        search.addEventListener("input", (e) => {
+            const value = e.target.value.toLowerCase();
+            const filtered = movies.filter((movie) =>
+                movie.name.toLowerCase().includes(value)
+            );
+
+            if (filtered.length == 0) {
+                displayTag.innerHTML = `
+        <div class="not-found">
+          <h3>❌ Movie not found</h3>
+        </div>`;
+                return;
+            }
+
+            renderMovies(filtered);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
